@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthetic Indices Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator-header">
+            <h1>Synthetic Indices Calculator</h1>
+            <p>Calculate your position size</p>
+        </div>
+        
+        <div class="form-grid">
+            <div class="input-group" style="grid-column: 1 / -1;">
+                <label for="pair">Select Index</label>
+                <select id="pair">
+                    <option value="VIX 10 1s">VIX 10 1s</option>
+                    <option value="VIX 10">VIX 10</option>
+                    <option value="VIX 25 1s">VIX 25 1s</option>
+                    <option value="VIX 25">VIX 25</option>
+                    <option value="VIX 50 1s">VIX 50 1s</option>
+                    <option value="VIX 50">VIX 50</option>
+                    <option value="VIX 75 1s">VIX 75 1s</option>
+                    <option value="VIX 75">VIX 75</option>
+                    <option value="VIX 100 1s">VIX 100 1s</option>
+                    <option value="VIX 100">VIX 100</option>
+                    <option value="VIX 150 1s">VIX 150 1s</option>
+                    <option value="VIX 200 1s">VIX 200 1s</option>
+                    <option value="VIX 250 1s">VIX 250 1s</option>
+                    <option value="VIX 300 1s">VIX 300 1s</option>
+                    <option value="Step Index">Step Index</option>
+                    <option value="Boom 300">Boom 300</option>
+                    <option value="Boom 500">Boom 500</option>
+                    <option value="Boom 1000">Boom 1000</option>
+                    <option value="Crash 300">Crash 300</option>
+                    <option value="Crash 500">Crash 500</option>
+                    <option value="Crash 1000">Crash 1000</option>
+                    <option value="Jump 10">Jump 10</option>
+                    <option value="Jump 25">Jump 25</option>
+                    <option value="Jump 50">Jump 50</option>
+                    <option value="Jump 75">Jump 75</option>
+                    <option value="Jump 100">Jump 100</option>
+                    <option value="Range Break 100">Range Break 100</option>
+                    <option value="Range Break 200">Range Break 200</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="entryPrice">Entry Price</label>
+                <input type="number" id="entryPrice" placeholder="Enter entry price">
+            </div>
+
+            <div class="input-group">
+                <label for="stopLoss">Stop Loss</label>
+                <input type="number" id="stopLoss" placeholder="Enter stop loss">
+            </div>
+
+            <div class="input-group">
+                <label for="accountBalance">Account Balance</label>
+                <input type="number" id="accountBalance" placeholder="Enter account balance">
+            </div>
+
+            <div class="input-group">
+                <label for="percentageRisk">Risk Percentage</label>
+                <input type="number" id="percentageRisk" placeholder="Enter risk percentage">
+            </div>
+
+            
+        </div>
+
+        <div class="button-group">
+            <button id="calculate">Calculate</button>
+            <button id="clear">Clear</button>
+        </div>
+
+        <div class="result-container">
+            <div id="lotSize">LotSize: 0.00</div>
+            <div id="risk">Risk: 0.00</div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+/* Modern Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #2a2c39;
+    background: #242631;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus, .input-group select:focus {
+    border-color: #6c72ff;
+    outline: none;
+}
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px; 
+}
+
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #13141f;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.calculator-container {
+    background: #1c1d27;
+    border-radius: 24px;
+    padding: 40px;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.calculator-header {
+    margin-bottom: 30px;
+}
+
+.calculator-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.calculator-header p {
+    color: #6c72ff;
+    font-size: 16px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.input-group {
+    margin-bottom: 0;
+}
+
+/* Update responsive design */
+@media (max-width: 480px) {
+    .calculator-container {
+        padding: 24px;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .button-group {
+        grid-template-columns: 1fr;
+    }
+}
+
+.button-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 30px;
+}
+
+button {
+    padding: 14px 24px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#calculate {
+    background: #6c72ff;
+    color: white;
+}
+
+#calculate:hover {
+    background: #5156ff;
+    transform: translateY(-2px);
+}
+
+#clear {
+    background: #2a2c39;
+    color: #ffffff;
+}
+
+#clear:hover {
+    background: #353849;
+}
+
+.result-container {
+    margin-top: 30px;
+    padding: 20px;
+    background: #242631;
+    border-radius: 12px;
+    text-align: center;
+}
+
+#lotSize {
+    font-size: 24px;
+    font-weight: 600;
+    color: #6c72ff;
+    margin-bottom: 8px;
+}
+
+#risk {
+    color: #8a8d9c;
+    font-size: 14px;
+}
